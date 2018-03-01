@@ -1,0 +1,26 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+repositories {
+    mavenCentral()
+}
+
+war {
+	baseName = 'mywebapp'
+}
+
+eclipse {
+	wtp {
+		component {
+			contextPath = 'mywebapp'
+		}
+	}
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework:spring-webmvc:5.0.1.RELEASE")
+    compile("javax.servlet:javax.servlet-api:3.0.1")
+}
+

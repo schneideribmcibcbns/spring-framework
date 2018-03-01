@@ -1,0 +1,43 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.10.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'org.springframework.boot'
+
+war {
+	baseName = 'jspinwar'
+}
+
+eclipse {
+	wtp {
+		component {
+			contextPath = 'jspinwar'
+		}
+	}
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile("javax.servlet:jstl:1.2")
+	providedCompile('org.apache.tomcat.embed:tomcat-embed-jasper:8.5.28')
+	providedCompile('org.springframework.boot:spring-boot-starter-tomcat')
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
