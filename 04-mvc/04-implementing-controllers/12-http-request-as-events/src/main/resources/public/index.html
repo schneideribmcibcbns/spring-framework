@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Sse client</h1>
+<a href="javascript:void" onclick="sendRequest()">Send Request</a>
+<div id="sseDiv"></div>
+
+<script>
+function sendRequest(){
+if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource("/sseTest");
+    source.onmessage = function(event) {
+        document.getElementById("sseDiv").innerHTML += event.data + " - ";
+    };
+} else {
+    document.getElementById("sseDiv").innerHTML =
+                     "Your browser does not support server-sent events.";
+}
+}
+</script>
+
+</body>
+</html>
