@@ -7,6 +7,9 @@ repositories {
 
 dependencies {
 	compile 'org.springframework:spring-context:4.3.9.RELEASE' 
+	compile 'org.fluttercode.datafactory:datafactory:0.8' 
+	compile 'com.objectdb:objectdb:2.2.5' 
+	compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final' 
 	testCompile ('junit:junit:4.12')
 }
 
