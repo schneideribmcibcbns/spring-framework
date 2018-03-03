@@ -6,7 +6,13 @@ repositories {
 }
 
 dependencies {
-	compile 'org.springframework:spring-context:4.3.9.RELEASE' 
+	configurations.all {
+    	exclude group: "commons-logging", module: "commons-logging"
+	}
+	compile 'org.springframework:spring-context:4.3.9.RELEASE'
+	compile 'org.slf4j:slf4j-log4j12:1.8.0-alpha2'
+    compile 'org.slf4j:jcl-over-slf4j:1.8.0-alpha2'
+	
 	testCompile ('junit:junit:4.12')
 }
 

@@ -7,6 +7,8 @@ repositories {
 
 dependencies {
 	compile 'org.springframework:spring-context:4.3.9.RELEASE' 
+	compile 'org.apache.logging.log4j:log4j-core:2.8.2'
+	compile 'org.apache.logging.log4j:log4j-jcl:2.8.2'
 	testCompile ('junit:junit:4.12')
 }
 
