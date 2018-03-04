@@ -1,0 +1,12 @@
+refresh:
+   rate: 5
+---
+spring:
+   profiles: dev, test
+refresh:
+   rate: 10
+---
+spring:
+   profiles: prod
+refresh:
+   rate: 8

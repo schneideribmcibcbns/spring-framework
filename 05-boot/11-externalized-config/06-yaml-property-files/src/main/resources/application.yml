@@ -1,0 +1,5 @@
+app:
+ title: Boot ${app} @project.artifactId@
+spring:
+    main:
+     LogStartupInfo: false

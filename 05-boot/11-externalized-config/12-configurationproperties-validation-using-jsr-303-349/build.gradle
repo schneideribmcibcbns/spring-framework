@@ -23,6 +23,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.hibernate:hibernate-validator:5.4.1.Final')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
