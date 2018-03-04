@@ -22,7 +22,11 @@ repositories {
 
 
 dependencies {
+	configurations.all {
+		exclude group:'org.springframework.boot', module:'spring-boot-starter-logging'
+	}
 	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-log4j2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
