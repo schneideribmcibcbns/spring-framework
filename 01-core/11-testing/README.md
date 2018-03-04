@@ -6,7 +6,7 @@
 
 ## [03-Resolving active profiles programmatically by using ActiveProfilesResolver](03-resolving-active-profiles-programmatically-by-using-activeprofilesresolver/README.md)
 
-## [04-Initializing ConfigurableApplicationContext with ApplicationContextInitializer.](04-initializing-configurableapplicationcontext-with-applicationcontextinitializer./README.md)
+## [04-Initializing ConfigurableApplicationContext with ApplicationContextInitializer](04-initializing-configurableapplicationcontext-with-applicationcontextinitializer/README.md)
 
 ## [05-@TestPropertySource Example](05-@testpropertysource-example/README.md)
 
