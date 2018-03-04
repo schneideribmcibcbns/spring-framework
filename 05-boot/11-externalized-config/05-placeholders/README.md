@@ -1,4 +1,4 @@
-Using ${} placeholders in Property Files
+# Using ${} placeholders in Property Files
 
 Spring provides it's own variable substitution in property files. We just need to use ${someProp} in property file and start the application having 'someProp' in system properties or as main class (or jar) argument '--someProp=theValue'.
 
