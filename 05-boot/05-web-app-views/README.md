@@ -1,12 +1,10 @@
-# 01-kickstart
-# 02-maven-config
-# 03-auto-config
-# 04-web-app
-# 05-web-app-views
-# 06-web-app-error-handling
-# 07-project-structure
-# 08-dev-tools
-# 09-app-helper
-# 10-app-events-listeners
-# 11-externalized-config
-# 12-logging
+# Web Application Views
+
+## [01-Using FreeMarker View](01-freemarker-view/README.md)
+
+## [02-Using Groovy View](02-groovy-view/README.md)
+
+## [03-Using Thymeleaf View](03-thymeleaf-view/README.md)
+
+## [04-Using Mustache View](04-mustache-view/README.md)
+
