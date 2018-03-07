@@ -1,12 +1,10 @@
-# 01-kickstart
-# 02-maven-config
-# 03-auto-config
-# 04-web-app
-# 05-web-app-views
-# 06-web-app-error-handling
-# 07-project-structure
-# 08-dev-tools
-# 09-app-helper
-# 10-app-events-listeners
-# 11-externalized-config
-# 12-logging
+# Project Structure
+
+## [01. Exploded project structure](01-exploded-project-structure/README.md)
+
+## [02. Executable jar file structure](02-executable-jar-file-structure/README.md)
+
+## [03. Executable war file structure](03-executable-war-file-structure/README.md)
+
+## [04. Exploded web application with jar and war packaging](04-exploded-web-application-with-jar-and-war-packaging/README.md)
+
