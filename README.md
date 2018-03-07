@@ -56,6 +56,6 @@
 ### [03 Spring ORM](03-orm/README.md)
 ### [04 Spring MVC](04-mvc/README.md)
 ### [05 Spring Boot](05-boot/README.md)
-### [06 Spring Integration](06-integration/README.md)
+### [06 Spring Integration](06-integ/README.md)
 ### [07 Spring Security](07-security/README.md)
 ### [08 Spring Webflux](08-webflux/README.md)
