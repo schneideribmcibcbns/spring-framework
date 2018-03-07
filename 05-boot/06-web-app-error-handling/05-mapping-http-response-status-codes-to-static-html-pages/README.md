@@ -89,7 +89,7 @@ Accessing http:/localhost:8080/app-info where our handler method (`handleAppInfo
 
 Accessing unmapped URL, say http:/localhost:8080/other, will map to our 404.html page:
 
-![module](images/output1.png)
+![module](images/output2.png)
 
 Accessing http:/localhost:8080/, where we our handler method (`handleRequest()`) throws `RuntimeException` will return the response code `500` (Internal server error) :
 
