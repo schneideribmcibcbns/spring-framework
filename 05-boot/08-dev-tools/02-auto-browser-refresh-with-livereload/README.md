@@ -6,13 +6,13 @@ In addition to auto restart feature of spring-boot-devtools, LiveReload is anoth
 
 We have to [install LiveReload browser extension](http://livereload.com/extensions/) to use LiveReload. After installing LiveReload in chrome browser (for example), you will see an icon like this:
 
-![module](images/output.png)
+![module](images/out.png)
 
 Also after starting our spring boot application we have to make sure that this tool is enabled or not. Hover over the mouse pointer on the LiveReload circular icon and if we see 'Enable LiveReload' tooltip like this then we have to click the icon to enable it.
 
-![module](images/output.png)
+![module](images/output3.png)
 
-![module](images/output.png)
+![module](images/output4.png)
 
 ## Creating a simple Spring Boot MVC project
 
@@ -64,6 +64,6 @@ Following video shows how auto-restart and LiveReload work without explicitly re
 
 Note that in intellij 'Make project automatically' option should be selected otherwise we have to use Ctrl+F9 for compilation:
 
-![module](images/output2.png)
+![module](images/out2.png)
 
 In Eclipse, we have to save (Ctrl+s or Ctrl+Shift+s) to trigger the compilation.
