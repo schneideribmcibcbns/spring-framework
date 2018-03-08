@@ -40,7 +40,7 @@ public class ExampleMain {
 
 Here, we don't have to explicitly add `CommandLinePropertySource` to the `Environment object` (like we have to do with Spring core). Secondly our bean will be free from any Spring specific API.
 
-```
+```java
 @SpringBootConfiguration
 public class ExampleMain2 {
 
