@@ -221,7 +221,7 @@ Note that, we are still able to receive ExitCodeEvent in above example.
 
 `ExitCodeExceptionMapper` is a strategy interface that can be used to provide a mapping between exceptions and exit codes as shown in the following example.
 
-```
+```java
 @SpringBootConfiguration
 public class ExampleExitCodeExceptionMapper {
 

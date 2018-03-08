@@ -4,7 +4,7 @@ If we need to get a callback at the SpringApplication startup, we can implement 
 
 ## Implementing CommandLineRunner
 
-```
+```java
 @SpringBootConfiguration
 public class CmdExample {
     @Bean
