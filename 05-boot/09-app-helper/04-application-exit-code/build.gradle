@@ -22,10 +22,6 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.boot:spring-boot-devtools')
-	compileOnly('org.projectlombok:lombok')
-	compile('org.apache.tomcat.embed:tomcat-embed-jasper:8.5.28')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('org.springframework.boot:spring-boot-starter')
 }
 

@@ -1,8 +1,13 @@
-# Destruction callback
+package com.logicbig.example;
 
-SpringApplication implicitly registers a shutdown hook with the JVM to ensure that ApplicationContext is closed gracefully on exit. That will also call all bean methods annotated with `@PreDestroy`. That means we don't have to explicitly use `ConfigurableApplicationContext#registerShutdown Hook()` in a boot application, like we have to do in spring core application.
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
-```java
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @SpringBootConfiguration
 public class ExampleMain {
     @Bean
@@ -35,4 +40,3 @@ public class ExampleMain {
         }
     }
 }
-```
