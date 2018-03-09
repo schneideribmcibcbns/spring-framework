@@ -2,25 +2,35 @@
 
 In this example, we will see how to use Spring security in a Java Servlet and JSP application. We will use Spring web security to do in-memory authentication. As this web application will run in a servlet container, JSP and Servlet can be used as usual. We will not use Spring MVC in this example.
 
-## Maven dependencies
+## Gradle dependencies
 
-```xml
-pom.xml
-<dependency>
-   <groupId>org.springframework.security</groupId>
-   <artifactId>spring-security-web</artifactId>
-   <version>4.2.3.RELEASE</version>
-</dependency>
-<dependency>
-   <groupId>org.springframework.security</groupId>
-   <artifactId>spring-security-config</artifactId>
-   <version>4.2.3.RELEASE</version>
-</dependency>
-<dependency>
-   <groupId>javax.servlet</groupId>
-   <artifactId>javax.servlet-api</artifactId>
-   <version>3.1.0</version>
-</dependency>
+```gradle
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+war {
+	baseName = 'mywebapp'
+}
+
+eclipse {
+	wtp {
+		component {
+			contextPath = 'mywebapp'
+		}
+	}
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.security:spring-security-web:4.2.3.RELEASE')
+	compile('org.springframework.security:spring-security-config:4.2.3.RELEASE')
+	compile('javax.servlet:javax.servlet-api:3.1.0')
+}
 ```
 
 ## Java Config class
@@ -29,8 +39,8 @@ pom.xml
 @EnableWebSecurity
 public class AppConfig extends WebSecurityConfigurerAdapter {
 
-  @Override
-  public void configure(AuthenticationManagerBuilder builder)
+@Override
+public void configure(AuthenticationManagerBuilder builder)
           throws Exception {
       builder.inMemoryAuthentication()
              .withUser("alexa")
@@ -41,11 +51,12 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
 ```
 
 ## Initializing Java Config
+
 ```java
 public class AppSecurityInitializer extends AbstractSecurityWebApplicationInitializer {
-  public AppSecurityInitializer() {
-      super(AppConfig.class);
-  }
+	public AppSecurityInitializer() {
+   		super(AppConfig.class);
+	}
 }
 ```
 
@@ -60,7 +71,7 @@ public class AppSecurityInitializer extends AbstractSecurityWebApplicationInitia
  <p>
   <%=request.getUserPrincipal().getName().toString()%>
  </p>
- <a href="/example">Go to Example Servlet</a>
+ <a href="example">Go to Example Servlet</a>
 </body>
 </html>
 ```
@@ -68,7 +79,7 @@ public class AppSecurityInitializer extends AbstractSecurityWebApplicationInitia
 ## A Servlet
 
 ```java
-@WebServlet(name = "exampleServlet", urlPatterns = {"/example"})
+@WebServlet(name = "exampleServlet", urlPatterns = {"example"})
 public class ExampleServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req,

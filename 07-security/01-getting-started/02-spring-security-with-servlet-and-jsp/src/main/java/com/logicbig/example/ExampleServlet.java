@@ -20,6 +20,6 @@ public class ExampleServlet extends HttpServlet {
         writer.println("handling request, servlet name: " + servletName);
         writer.println("<br/>");
         writer.println("user: "+req.getUserPrincipal().getName());
-        writer.println( "<br/><a href=\"/index.jsp\">Main Page</a>");
+        writer.println( "<br/><a href=\"index.jsp\">Main Page</a>");
     }
 }
