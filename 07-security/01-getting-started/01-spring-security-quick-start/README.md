@@ -2,26 +2,39 @@
 
 This is a quick start example of Spring security. We will see how to do in-memory authentication in a web application. This web application will run in a servlet container with static html pages. To keep it simple, we are not going to use Spring MVC or other spring modules in this example.
 
-## Maven dependencies
+## Gradle dependencies
 
-**pom.xml**
+**build.gradle**
 
-```java
-<dependency>
-   <groupId>org.springframework.security</groupId>
-   <artifactId>spring-security-web</artifactId>
-   <version>4.2.3.RELEASE</version>
-</dependency>
-<dependency>
-   <groupId>org.springframework.security</groupId>
-   <artifactId>spring-security-config</artifactId>
-   <version>4.2.3.RELEASE</version>
-</dependency>
-<dependency>
-   <groupId>javax.servlet</groupId>
-   <artifactId>javax.servlet-api</artifactId>
-   <version>3.1.0</version>
-</dependency>
+```gradle
+
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+war {
+	baseName = 'mywebapp'
+}
+
+eclipse {
+	wtp {
+		component {
+			contextPath = 'mywebapp'
+		}
+	}
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.security:spring-security-web:4.2.3.RELEASE')
+	compile('org.springframework.security:spring-security-config:4.2.3.RELEASE')
+	compile('javax.servlet:javax.servlet-api:3.1.0')
+}
 ```
 
 javax.servlet-api dependency is needed because spring-security-web contains servlet filters and other servlet based infrastructure code.
@@ -47,7 +60,7 @@ Above configuration will require authentication to every URL in our application.
 
 ## Initializing Java Config
 
-We have to extend Abstract Security Web Application Initializer to initialize our Java config class:
+We have to extend `AbstractSecurityWebApplicationInitializer` to initialize our Java config class:
 
 ```java
 public class AppSecurityInitializer extends AbstractSecurityWebApplicationInitializer {
@@ -57,7 +70,7 @@ public class AppSecurityInitializer extends AbstractSecurityWebApplicationInitia
 }
 ```
 
-Above code will also register necessary servlet filters for authentication process. Abstract Security Web Application Initializer is based on ServletContainerInitializer pattern.
+Above code will also register necessary servlet filters for authentication process. `AbstractSecurityWebApplicationInitializer` is based on `ServletContainerInitializer` pattern.
 
 ## Static pages
 **src/main/webapp/index.html**
@@ -84,11 +97,7 @@ Above code will also register necessary servlet filters for authentication proce
 </html>
 ```
 
-To try examples, run embedded tomcat (configured in pom.xml of example project below):
-
-```shell
-mvn tomcat7:run-war
-```
+To try examples, run embedded tomcat.
 
 ## Output
 
