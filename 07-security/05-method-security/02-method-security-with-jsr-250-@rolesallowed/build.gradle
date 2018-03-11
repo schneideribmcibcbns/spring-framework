@@ -1,6 +1,19 @@
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+war {
+	baseName = 'mywebapp'
+}
+
+eclipse {
+	wtp {
+		component {
+			contextPath = '/'
+		}
+	}
+}
+
 
 sourceCompatibility = 1.8
 
@@ -12,6 +25,9 @@ repositories {
 dependencies {
 	compile('org.springframework.security:spring-security-web:4.2.3.RELEASE')
 	compile('org.springframework.security:spring-security-config:4.2.3.RELEASE')
+	compile('org.springframework:spring-webmvc:4.3.9.RELEASE')
+	compile('javax.annotation:jsr250-api:1.0')
 	compile('javax.servlet:javax.servlet-api:3.1.0')
+	compile('javax.servlet:jstl:1.2')
 }
 
