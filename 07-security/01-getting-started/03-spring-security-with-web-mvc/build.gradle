@@ -9,7 +9,7 @@ war {
 eclipse {
 	wtp {
 		component {
-			contextPath = 'mywebapp'
+			contextPath = '/'
 		}
 	}
 }
