@@ -1,0 +1,12 @@
+<html lang="en">
+<body>
+ <h2>Spring Security Example</h2>
+ <p>Time: ${time}</p>
+  <form action="logout" method="post">
+     <input type="hidden"
+            name="${_csrf.parameterName}"
+            value="${_csrf.token}"/>
+  <input type="submit" value="Logout">
+</form>
+</body>
+</html>
