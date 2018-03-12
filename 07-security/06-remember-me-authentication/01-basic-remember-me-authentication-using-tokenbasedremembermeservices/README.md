@@ -1,6 +1,6 @@
 # Basic Remember-Me Authentication using TokenBasedRememberMeServices
 
-**Note**: This example works with the following combination:
+<p color="red"><b>Note</b>: This example works with the following combination:</p>
 
 ```gradle
 dependencies {
